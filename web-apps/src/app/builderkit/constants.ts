@@ -1,8 +1,9 @@
 import { fuji } from "./chains/definitions/fuji";
 import { echo } from "./chains/definitions/echo";
 import { dispatch } from "./chains/definitions/dispatch";
+import { disgodev } from './chains/definitions/disgodev';
 
-export const CHAINS = [fuji, echo, dispatch];
+export const CHAINS = [fuji, echo, dispatch, disgodev];
 export const TOKENS = [
     {
         address: "native",
@@ -10,6 +11,23 @@ export const TOKENS = [
         symbol: "AVAX",
         decimals: 18,
         chain_id: 43113
+    },
+    {
+        address: "0x8D6f0E153B1D4Efb46c510278Db3678Bb1Cc823d",
+        name: "DISGO Token",
+        symbol: "DISGO",
+        decimals: 18,
+        chain_id: 105,
+        supports_ictt: true,
+        transferer: "0xD63c60859e6648b20c38092cCceb92c5751E32fF",
+        mirrors: [
+            {
+                address: "0x8D6f0E153B1D4Efb46c510278Db3678Bb1Cc823d",
+                transferer: "0x8D6f0E153B1D4Efb46c510278Db3678Bb1Cc823d",
+                chain_id: 173750,
+                decimals: 18
+            }
+        ]
     },
     {
         address: "0x8D6f0E153B1D4Efb46c510278Db3678Bb1Cc823d",
